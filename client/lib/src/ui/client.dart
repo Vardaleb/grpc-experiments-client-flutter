@@ -1,6 +1,8 @@
 import 'package:client/src/ui/client_home_page.dart';
 import 'package:flutter/material.dart';
 
+const String APP_NAME = 'gRPC Client Demo';
+
 class Client extends StatelessWidget {
   const Client({super.key});
 
@@ -8,7 +10,7 @@ class Client extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'gRPC Client Demo',
+      title: APP_NAME,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,7 +30,7 @@ class Client extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ClientHomePage(title: 'Flutter Demo Home Page'),
+      home: const ClientHomePage(title: APP_NAME),
     );
   }
 }

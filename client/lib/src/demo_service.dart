@@ -30,7 +30,10 @@ class DemoService {
   set host(String value) => _host = value;
   set port(int value) => _port = value;
 
-  void recconnect() => _init();
+  Future<void> reconnect() async {
+    await _channel.shutdown();
+    _init();
+  }
 
   Future<String> unary() async {
     String result = "";
