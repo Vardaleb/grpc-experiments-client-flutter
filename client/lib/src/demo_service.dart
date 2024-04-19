@@ -7,13 +7,13 @@ class DemoService {
   static final DemoService _instance = DemoService._internal();
   late ClientChannel _channel;
   late DemoServiceClient _stub;
-  String _host = 'localhost';
-  int _port = 50051;
 
   DemoService._internal() {
     _init();
   }
 
+  String _host = 'localhost';
+  int _port = 50051;
   void _init() {
     _channel = ClientChannel(_host,
         port: _port,
